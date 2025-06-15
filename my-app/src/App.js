@@ -1,11 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
-import {Button} from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { Entry } from './pages/entry/entry.page';
+import { DefaultLayout } from './Layout/DefaultLayout';
+
+
 function App() {
   return (
     <div className="App">
-      <Entry/>
+      <DefaultLayout>
+        Dashboard
+      </DefaultLayout>
     </div>
   );
 }
