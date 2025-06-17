@@ -1,15 +1,9 @@
 import React from 'react';
-import { Table, Breadcrumb } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 
 export const TicketTable = ({ tickets = [] }) => {
   return (
     <div>
-      {/* Breadcrumb navigation */}
-      <Breadcrumb className="mb-3">
-        <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
-        <Breadcrumb.Item active>Dashboard</Breadcrumb.Item>
-      </Breadcrumb>
-
       <h5 className="mb-3">Recently Added Tickets</h5>
 
       <Table striped bordered hover responsive>
