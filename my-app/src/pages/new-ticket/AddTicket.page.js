@@ -22,9 +22,8 @@ export const AddTicket = () => {
 
       <Row>
         <Col>
-          {/* You can replace this with your ticket form component */}
           <div className="p-4 border rounded bg-light">
-           <AddTicketForm/>
+            <AddTicketForm />
           </div>
         </Col>
       </Row>
