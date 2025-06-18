@@ -1,14 +1,10 @@
 import React from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Breadcrumb } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { TicketTable } from '../../components/ticket-table/TicketTable.comp';
 import tickets from '../../assets/data/dummy-ticket.json';
 
 export const Dashboard = () => {
-  const handleAddTicket = () => {
-    alert('Redirect to Add New Ticket form');
-  };
-
-  // 🔢 Dynamic Ticket Stats
   const totalTickets = tickets.length;
   const pendingTickets = tickets.filter(
     ticket => ticket.status === 'Client response pending'
@@ -17,29 +13,39 @@ export const Dashboard = () => {
 
   return (
     <Container className="mt-4">
-      {/* Header and Button */}
+      {/* 🔹 Breadcrumb */}
+      <Row>
+        <Col>
+          <Breadcrumb>
+            <Breadcrumb.Item linkAs={Link} linkProps={{ to: '/' }}>
+              Home
+            </Breadcrumb.Item>
+            <Breadcrumb.Item active>Dashboard</Breadcrumb.Item>
+          </Breadcrumb>
+        </Col>
+      </Row>
+
+      {/* 🔹 Header and Add Ticket Button */}
       <Row className="mb-3">
         <Col>
           <h2>Dashboard</h2>
         </Col>
         <Col className="text-end">
-          <Button variant="primary" onClick={handleAddTicket}>
-            + Add New Ticket
-          </Button>
+          <Link to="/add-ticket">
+            <Button variant="primary">+ Add New Ticket</Button>
+          </Link>
         </Col>
       </Row>
 
       <hr />
 
-      {/* Ticket Summary Cards */}
+      {/* 🔹 Ticket Summary Cards */}
       <Row className="mb-4">
         <Col md={4}>
           <Card bg="primary" text="white" className="text-center">
             <Card.Body>
               <Card.Title>Total Tickets</Card.Title>
-              <Card.Text style={{ fontSize: '1.5rem' }}>
-                {totalTickets}
-              </Card.Text>
+              <Card.Text style={{ fontSize: '1.5rem' }}>{totalTickets}</Card.Text>
             </Card.Body>
           </Card>
         </Col>
@@ -47,9 +53,7 @@ export const Dashboard = () => {
           <Card bg="warning" text="dark" className="text-center">
             <Card.Body>
               <Card.Title>Pending Tickets</Card.Title>
-              <Card.Text style={{ fontSize: '1.5rem' }}>
-                {pendingTickets}
-              </Card.Text>
+              <Card.Text style={{ fontSize: '1.5rem' }}>{pendingTickets}</Card.Text>
             </Card.Body>
           </Card>
         </Col>
@@ -57,15 +61,13 @@ export const Dashboard = () => {
           <Card bg="success" text="white" className="text-center">
             <Card.Body>
               <Card.Title>New Tickets</Card.Title>
-              <Card.Text style={{ fontSize: '1.5rem' }}>
-                {newTickets}
-              </Card.Text>
+              <Card.Text style={{ fontSize: '1.5rem' }}>{newTickets}</Card.Text>
             </Card.Body>
           </Card>
         </Col>
       </Row>
 
-      {/* Recently Added Tickets Table */}
+      {/* 🔹 Ticket Table */}
       <Row>
         <Col>
           <TicketTable tickets={tickets} />

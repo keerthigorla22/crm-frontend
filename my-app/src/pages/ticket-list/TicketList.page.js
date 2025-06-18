@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Breadcrumb, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { SearchForm } from '../../components/search-form/SearchForm.comp';
 import { TicketTable } from '../../components/ticket-table/TicketTable.comp';
 import ticketsData from '../../assets/data/dummy-ticket.json';
@@ -14,7 +15,7 @@ export const TicketList = () => {
       ticket.subject.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-    filtered = filtered.sort((a, b) => {
+    filtered.sort((a, b) => {
       if (a.subject.toLowerCase() < b.subject.toLowerCase()) return sortAsc ? -1 : 1;
       if (a.subject.toLowerCase() > b.subject.toLowerCase()) return sortAsc ? 1 : -1;
       return 0;
@@ -28,7 +29,7 @@ export const TicketList = () => {
       <Row>
         <Col>
           <Breadcrumb>
-            <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
+            <Breadcrumb.Item linkAs={Link} linkProps={{ to: '/' }}>Home</Breadcrumb.Item>
             <Breadcrumb.Item active>Ticket List</Breadcrumb.Item>
           </Breadcrumb>
         </Col>
@@ -36,7 +37,9 @@ export const TicketList = () => {
 
       <Row className="mt-4">
         <Col md={6}>
-          <Button variant="info">Add New Ticket</Button>
+          <Link to="/add-ticket">
+            <Button variant="info">Add New Ticket</Button>
+          </Link>
         </Col>
         <Col md={6} className="text-end">
           <SearchForm

@@ -1,24 +1,19 @@
 [
-  {
+   {
     "id": 1,
-    "subject": "Email   certificate expired",
-    "status": "Client response pending",
-    "addedAt": "2020-09-23",
-    "history": [
+    "subject": "Issue with SSL Certificate",
+    "status": "Pending Operator Response",
+    "addedAt": "2020-05-28T09:30:00Z",
+    "conversations": [
       {
-        "date": "20-10-10",
-        "message": "sjflsjl",
-        "messageBy": "client"
+        "sender": "Client",
+        "msgAt": "2020-05-28T09:30:00Z",
+        "message": "Hello Team,\n\nIt seems like we are having some SSL certificate issue. Our customers are having issues accessing our website. Can you please check and advise us?\n\nThanks,\nRegards,\nClient"
       },
       {
-        "date": "20-10-10",
-        "message": "sjflsjl",
-        "messageBy": "operator"
-      },
-      {
-        "date": "20-10-10",
-        "message": "sjflsjl",
-        "messageBy": "client"
+        "sender": "Operator",
+        "msgAt": "2020-05-29T10:00:00Z",
+        "message": "Hello Client,\n\nI am sorry to hear you have an issue with your website. We are looking into the issue. We will resolve it as soon as possible.\n\nRegards,\nOperator"
       }
     ]
   },
@@ -26,54 +21,54 @@
     "id": 2,
     "subject": "Issue with Email certificate",
     "status": "Client response pending",
-    "addedAt": "2020-09-23"
+    "addedAt": "2020-09-23T11:00:00Z"
   },
   {
     "id": 3,
     "subject": "Issue app crashing",
     "status": "Client response pending",
-    "addedAt": "2020-09-23"
+    "addedAt": "2020-09-23T12:00:00Z"
   },
   {
     "id": 4,
     "subject": "Issue with ssl certificate",
     "status": "Client response pending",
-    "addedAt": "2020-09-23"
+    "addedAt": "2020-09-23T13:00:00Z"
   },
   {
     "id": 5,
     "subject": "Issue with ssl certificate",
     "status": "Client response pending",
-    "addedAt": "2020-09-23"
+    "addedAt": "2020-09-23T14:00:00Z"
   },
   {
     "id": 6,
     "subject": "Issue with ssl certificate",
     "status": "Client response pending",
-    "addedAt": "2020-09-23"
+    "addedAt": "2020-09-23T15:00:00Z"
   },
   {
     "id": 7,
     "subject": "Issue with ssl certificate",
     "status": "Client response pending",
-    "addedAt": "2020-09-23"
+    "addedAt": "2020-09-23T16:00:00Z"
   },
   {
     "id": 8,
     "subject": "Issue with ssl certificate",
     "status": "Client response pending",
-    "addedAt": "2020-09-23"
+    "addedAt": "2020-09-23T17:00:00Z"
   },
   {
     "id": 9,
     "subject": "Issue with ssl certificate",
     "status": "Client response pending",
-    "addedAt": "2020-09-23"
+    "addedAt": "2020-09-23T18:00:00Z"
   },
   {
     "id": 10,
     "subject": "Issue with ssl certificate",
     "status": "Client response pending",
-    "addedAt": "2020-09-23"
+    "addedAt": "2020-09-23T19:00:00Z"
   }
 ]
